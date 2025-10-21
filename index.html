@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakudan Store</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="img/logo-bakudan.png" alt="Bakudan Logo" class="logo">
+            <!-- Navigation links can go here if needed -->
+        </div>
+    </header>
+
+    <nav id="sticky-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#quem-somos">Quem Somos</a></li>
+                <li><a href="#categorias">Categorias</a></li>
+                <li><a href="#frete-despacho">Frete</a></li>
+                <li><a href="#contatos">Contatos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="quem-somos" class="section">
+            <div class="container">
+                <h2>Quem Somos</h2>
+                <p>Bem-vindo à Bakudan Store, seu destino definitivo para colecionáveis, action figures, jogos e muito mais! Somos apaixonados por cultura pop e dedicados a trazer os melhores produtos para você, com qualidade e segurança. Explore nosso universo e encontre aquele item especial que faltava na sua coleção!</p>
+            </div>
+        </section>
+
+        <section id="categorias" class="section">
+            <div class="container">
+                <h2>Nossas Categorias</h2>
+                <div class="category-buttons">
+                    <a href="#" class="category-btn" style="background-image: url('img/Bakudan_Banner_01.png');">Action Figure</a>
+                    <a href="#" class="category-btn" style="background-image: url('img/Bakudan_Banner_02.png');">Acessórios</a>
+                    <a href="#" class="category-btn" style="background-image: url('img/Bakudan_Banner_03.png');">Exclusivos</a>
+                    <a href="#" class="category-btn" style="background-image: url('img/Bakudan_Banner_04.png');">Consoles</a>
+                    <a href="#" class="category-btn" style="background-image: url('img/Bakudan_Banner_05.png');">Jogos</a>
+                    <a href="#" class="category-btn" style="background-image: url('img/Bakudan_Banner_06.png');">Colecionáveis</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="frete-despacho" class="section">
+            <div class="container">
+                <h2>Frete e Despacho Postal</h2>
+                <p>Na Bakudan Store, garantimos que seus produtos cheguem até você com toda a segurança e agilidade. Trabalhamos com as melhores transportadoras para oferecer opções de frete que se encaixam na sua necessidade. Todos os nossos envios são cuidadosamente embalados e monitorados. Para mais detalhes sobre prazos e custos, consulte nossa política de frete.</p>
+                <p>Informações importantes sobre despacho postal: Em alguns casos, pode haver a cobrança de despacho postal pelos Correios. Este valor é de responsabilidade do comprador e não está incluso no valor do frete pago à Bakudan Store. Recomendamos verificar as políticas dos Correios para evitar surpresas.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contatos">
+        <div class="container">
+            <h3>Entre em Contato</h3>
+            <div class="social-buttons">
+                <a href="#" target="_blank"><img src="img/facebook-botão.png" alt="Facebook"></a>
+                <a href="#" target="_blank"><img src="img/instagram botão.png" alt="Instagram"></a>
+                <a href="#" target="_blank"><img src="img/tele-botão.png" alt="Telegram"></a>
+                <a href="#" target="_blank"><img src="img/whats-botão.png" alt="WhatsApp"></a>
+            </div>
+            <p>&copy; 2025 Bakudan Store. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        var navbar = document.getElementById("sticky-nav");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= 200) { // Adjust this value as needed
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+</html>
