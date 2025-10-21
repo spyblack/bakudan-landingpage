@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header id="#inicio">
+    <header>
         <div class="container">
             <img src="img/logo-bakudan.png" alt="Bakudan Logo" class="logo">
             <!-- Navigation links can go here if needed -->
@@ -17,7 +17,7 @@
     <nav id="sticky-nav">
         <div class="container">
             <ul>
-                <li><a href="#inicio">Bakudan</a></li>
+                <li><a href="#" id="link-bakudan-topo">Bakudan</a></li>
                 <li><a href="#quem-somos">Quem Somos</a></li>
                 <li><a href="#categorias">Categorias</a></li>
                 <li><a href="#frete-despacho">Frete</a></li>
@@ -83,6 +83,26 @@
                 navbar.classList.remove("sticky");
             }
         }
+
+        // Rolagem suave para o topo (link Bakudan)
+        document.getElementById('link-bakudan-topo').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Rolagem suave para os outros links de navegação
+        document.querySelectorAll('#sticky-nav ul li a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </body>
 </html>
